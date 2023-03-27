@@ -132,13 +132,14 @@ ORDER BY quantidade_total_vendida DESC;
 SELECT c.nome, c.telefone, c.email, pe.data_entrega, pe.endereco, SUM(pr.preco) as total_pedido
 FROM PEDIDO pe
 INNER JOIN CLIENTE c
-ON pe.id_cliente = c.id
+-- Para utilizar o filtro do nome, basta alterar a linha a seguir ex: 'Nome Cliente 1%' = O nome do cliente começa por "Nome Cliente 1"
+-- Não remova a porcentagem no final !
+ON pe.id_cliente = c.id and c.nome LIKE 'Nome Cliente 10%'
 INNER JOIN ITEM_PEDIDO ip
 ON ip.id_pedido = pe.id
 INNER JOIN PRODUTO pr
 ON ip.id_produto = pr.id
--- Para utilizar o filtro de periodo, basta alterar e descomentar a linha a seguir ex: BETWEEN '2023-03-25' AND '2023-04-16'
--- WHERE pe.data_entrega BETWEEN 'PERIODO INICIAL (yyyy-mm-dd)' AND 'PERIODO FINAL (yyyy-mm-dd)'
+-- Para utilizar o filtro de periodo, basta alterar a linha a seguir ex: BETWEEN '2023-03-30' AND '2023-04-16 = entre 30/03/2023 e 16/04/2023'
 WHERE pe.data_entrega BETWEEN '2023-03-25' AND '2023-04-26'
 GROUP BY pe.id, c.id
 ORDER BY c.nome ASC, pe.data_entrega ASC;
