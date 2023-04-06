@@ -13,8 +13,8 @@ A tabela de Item de pedido serviu com o propósito de intermediar a de Pedido e 
 | ID | ID_CLIENTE | ID_PRODUTO |         ENDERECO         |
 |----|------------|------------|--------------------------|
 | 1  |     1      |      3     | Rua Lauro Linhares, 2055 |
-| 1  |     1      |      33    | Rua Lauro Linhares, 2055 |
-| 1  |     1      |      4     | Rua Lauro Linhares, 2055 |
+| 2  |     1      |      33    | Rua Lauro Linhares, 2055 |
+| 3  |     1      |      4     | Rua Lauro Linhares, 2055 |
 
 ## Com tabela adicional
 
@@ -29,8 +29,8 @@ A tabela de Item de pedido serviu com o propósito de intermediar a de Pedido e 
 | ID | ID_PRODUTO | ID_PEDIDO |
 |----|------------|-----------|
 | 1  |      3     |     1     |           
-| 1  |      33    |     1     | 
-| 1  |      4     |     1     |
+| 2  |      33    |     1     | 
+| 3  |      4     |     1     |
 
 
 É observável uma diferença no endereço e id_cliente por exemplo, onde as linhas foram repetidas desnecessariamente. Ao projetar a seguinte lógica em um banco de dados do tamanho das aplicações da Bridge, obteríamos um ganho de desempenho.
