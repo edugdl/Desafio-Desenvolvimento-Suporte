@@ -13,8 +13,8 @@ A tabela de Item de pedido serviu com o propósito de intermediar a de Pedido e 
 | ID | ID_CLIENTE | ID_PRODUTO |         ENDERECO         |
 |----|------------|------------|--------------------------|
 | 1  |     1      |      3     | Rua Lauro Linhares, 2055 |
-| 2  |     1      |      33    | Rua Lauro Linhares, 2055 |
-| 3  |     1      |      4     | Rua Lauro Linhares, 2055 |
+| 1  |     1      |      33    | Rua Lauro Linhares, 2055 |
+| 1  |     1      |      4     | Rua Lauro Linhares, 2055 |
 
 ## Com tabela adicional
 
